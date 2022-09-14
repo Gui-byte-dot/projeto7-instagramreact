@@ -1,0 +1,259 @@
+
+  
+  .topo {
+    background-color: white;
+    height: 54px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  ion-icon {
+    font-size: 22px;
+  }
+  
+  .menu-topo {
+    background-color: white;
+    width: 935px;
+    height: 54px;
+    margin: 0 auto;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .separador {
+    background-color: #dbdbdb;
+    width: 1px;
+    height: 20px;
+  }
+  
+  .logo {
+    width: 140px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .buscar {
+    width: 220px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .buscar > input {
+    color: red;
+    background-color: #f3f0f0;
+    border: 1px solid #afaeae;
+    width: 215px;
+    height: 28px;
+  }
+  
+  .buscar > input::placeholder {
+    color: #979797;
+    text-align: center;
+  }
+  
+  .botoes {
+    width: 150px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container {
+    width: 935px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .conteudo-principal {
+    background-color: white;
+    width: 614px;
+    height: 500px;
+    margin-top: 88px;
+  }
+  
+  .stories {
+    width: 614px;
+    height: 118px;
+    border: 1px solid #dbdbdb;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .stories > ion-icon {
+    color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+  }
+  
+  .stories > div {
+    background-image: url("../img/stories_background.jpg");
+    background-size: cover;
+    width: 56px;
+    height: 56px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .feed {
+    background-color: blue;
+    width: 614px;
+    height: 400px;
+  }
+  
+  .profile {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+  }
+  .profile-feed {
+    width: 32px;
+    height: 32px;
+  }
+  .post {
+    background-color: #ffffff;
+    width: 614px;
+    height: auto;
+  }
+  
+  .post-title {
+    background-color: white;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .menu-mais {
+    color: #262626;
+  }
+  
+  .menu-mais ion-icon {
+    margin-right: 10px;
+  }
+  
+  .persona {
+    width: 90px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .persona > h4 {
+    margin-left: 10px;
+  }
+  
+  .post-media img {
+    width: 100%;
+    height: 612px;
+  }
+  
+  .post-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .esquerda {
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .post-coments {
+    width: 350px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .post-coments-img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .sidebar {
+    background-color: #ffffff;
+    width: 321px;
+    height: auto;
+    margin-top: 88px;
+  }
+  
+  .sidebar-perfil {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .sidebar-perfil div {
+    width: 75%;
+  }
+  
+  .profile-nome-usuario {
+    font-size: 14px;
+    color: #262626;
+    font-weight: bold;
+  }
+  
+  .profile-nome {
+    font-size: 12px;
+    color: #8e8e8e;
+  }
+  
+  .sugestoes {
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .paragrafo-1-sugestao {
+    margin-left: 10px;
+    width: 117px;
+    font-size: 12px;
+    color: #8e8e8e;
+  }
+  
+  .paragrafo-2-sugestao {
+    margin-right: 10px;
+    width: 55px;
+    font-size: 12px;
+    color: #262626;
+  }
+  
+  .perfil-sugestao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .perfil-sugestao-item {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .perfil-sugestao-item img {
+    width: 32px;
+    height: 32px;
+  }
