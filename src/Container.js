@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function Container() {
   return (
     <div class="container">
@@ -13,20 +15,14 @@ export default function Container() {
 
 function Stories() {
   const imagens = [
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
-    "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png",
+    "9gag.svg",
+    "meowed.svg",
+    "barked.svg",
+    "nathanwpylestrangeplanet.svg",
+    "wawawicomics.svg",
+    "respondeai.svg",
+    "filomoderna.svg",
+    "memeriagourmet.svg",
   ];
   const componentsStories =
     imagens.map(image =>
@@ -116,25 +112,14 @@ function Feed() {
   )
 }
 
-function Usuario(props){
-  return(
-    <div class="sidebar-perfil">
-    <img class="profile"
-      src={props.image} alt={props.nome}/>
-    <div>
-      <p class="profile-nome-usuario">{props.usuario}</p>
-      <p class="profile-nome">{props.nome}</p>
-    </div>
-  </div>
-  )
-}
+
 
 function Sidebar() {
   const sugestoes = [
-    {image: "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png", usuario: "Irmaodojorel", nome: "Irmão do Jorel"},
-    {image: "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png", usuario: "Irmaodojorel", nome: "Irmão do Jorel"},
-    {image: "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png", usuario: "Irmaodojorel", nome: "Irmão do Jorel"},
-    {image: "https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png", usuario: "Irmaodojorel", nome: "Irmão do Jorel"},
+    {image: "bad.vibes.memes.svg", usuario: "bad.vibes.memes", nome: "Segue você"},
+    {image: "chibirdart.svg", usuario: "chibirdart", nome: "Segue você"},
+    {image: "razoesparaacreditar.svg", usuario: "razoesparaacreditar", nome: "Novo no Instagram"},
+    {image: "adorable_animals.svg", usuario: "adorable_animals", nome: "Segue você"},
   ]
   const componentsSidebar =
     sugestoes.map(sugestion =>
@@ -153,8 +138,8 @@ function Sidebar() {
     );
   return (
     <div class="sidebar">
-      <Usuario image="https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png"
-      usuario="Irmaodojorel" nome="Irmão do Jorel"
+      <Usuario image="catanacomics.svg"
+      usuario="catanacomics" nome="Catana"
       />
       <div class="sidebar-conteudo">
         <div class="sugestoes">
@@ -166,5 +151,38 @@ function Sidebar() {
         </div>
       </div>
     </div>
+  )
+}
+
+function Usuario(props){
+  const [user, setUser] = React.useState(props.usuario);
+  const [imagem, setImagem] = React.useState(props.image);
+
+  function inserirNome(){
+    const nomePrompt = prompt("Qual é o seu nome?");
+    if(nomePrompt === "" || nomePrompt === null){
+      return false;
+    } else{
+      setUser(nomePrompt);
+    }}
+    
+  function inserirImagem(){
+    const nomeImagem = prompt("Insira um novo link para imagem");
+    if(nomeImagem === "" || nomeImagem === null){
+      return false
+    } else {
+      setImagem(nomeImagem);
+    }}
+
+    
+  return(
+    <div class="sidebar-perfil">
+    <img class="profile"
+      src={imagem} alt={props.nome} onClick={inserirImagem}/>
+    <div onClick={inserirNome}>
+      <p class="profile-nome-usuario">{user}</p>
+      <p class="profile-nome">{props.nome}</p>
+    </div>
+  </div>
   )
 }
