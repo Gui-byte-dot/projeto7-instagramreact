@@ -40,74 +40,60 @@ function Stories() {
 
   )
 }
-
 function Feed() {
+  const [isActive, setIsActive] = React.useState("");
+  const toggle = (index) => {
+    if(isActive === index){
+      setIsActive(null)
+    } else {
+      setIsActive(index)
+    }
+  }
+
+  
+const posts = [
+    {id:1, imagepost: "gato-telefone.svg", imagefeed:"meowed.svg",imagecoment:"respondeai.svg"},
+    {id:2, imagepost: "dog.svg", imagefeed:"barked.svg",imagecoment:"adorable_animals.svg"},
+  ]
+  const componentFeed =
+  posts.map(
+    (post, i) => 
+    <div class="post" >
+        <div class="post-title">
+          <div class="persona">
+            <img class="profile profile-feed"
+              src={post.imagefeed} />
+            <h4>Lara</h4>
+          </div>
+          <div class="menu-mais">
+            <ion-icon name="ellipsis-horizontal"></ion-icon>
+          </div>
+        </div>
+        <div class="post-media">
+          <img src={post.imagepost} alt="gato curioso na internet" />
+        </div>
+
+        <div class="post-action">
+          <div class="esquerda">
+            <ion-icon name="heart-outline"></ion-icon>
+            <ion-icon name="chatbubble-outline"></ion-icon>
+            <ion-icon name="paper-plane-outline"></ion-icon>
+          </div>
+          <div class="direita" className={isActive === i ? 'ioncolor' : ''} key={i} onClick={() => toggle(i)} >
+            <ion-icon name="bookmark-outline" ></ion-icon>          
+          </div>
+        </div>
+        <div class="post-coments">
+          <img class="profile post-coments-img"
+            src={post.imagecoment} />
+          <p>Curtido por respondeai e outras 101.523 pessoas</p>
+        </div>
+      </div>
+  )
   return (
+
     <div class="feed">
-      <div class="post">
-        <div class="post-title">
-          <div class="persona">
-            <img class="profile profile-feed"
-              src="https://i.pinimg.com/originals/e9/58/b5/e958b5b1f0811c4480e9a5c2fcfa21e3.jpg" />
-            <h4>Lara</h4>
-          </div>
-          <div class="menu-mais">
-            <ion-icon name="ellipsis-horizontal"></ion-icon>
-          </div>
-        </div>
-        <div class="post-media">
-          <img src="https://gateirasdobrasil.com.br/wp-content/uploads/2017/11/gato_celular.jpg
-              " alt="gato curioso na internet" />
-        </div>
-
-        <div class="post-action">
-          <div class="esquerda">
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
-          </div>
-          <div class="direita">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-          </div>
-        </div>
-        <div class="post-coments">
-          <img class="profile post-coments-img"
-            src="https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png" />
-          <p>Curtido por respondeai e outras 101.523 pessoas</p>
-        </div>
-      </div>
-      <div class="post">
-        <div class="post-title">
-          <div class="persona">
-            <img class="profile profile-feed"
-              src="https://i.pinimg.com/originals/e9/58/b5/e958b5b1f0811c4480e9a5c2fcfa21e3.jpg" />
-            <h4>Lara</h4>
-          </div>
-          <div class="menu-mais">
-            <ion-icon name="ellipsis-horizontal"></ion-icon>
-          </div>
-        </div>
-        <div class="post-media">
-          <img src="https://gateirasdobrasil.com.br/wp-content/uploads/2017/11/gato_celular.jpg
-                " alt="gato curioso na internet" />
-        </div>
-
-        <div class="post-action">
-          <div class="esquerda">
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
-          </div>
-          <div class="direita">
-            <ion-icon name="paper-plane-outline"></ion-icon>
-          </div>
-        </div>
-        <div class="post-coments">
-          <img class="profile post-coments-img"
-            src="https://cn.i.cdn.ti-platform.com/content/792/hermano-de-jorel/showpage/ar/jorel.f7a80b37.png" />
-          <p>Curtido por respondeai e outras 101.523 pessoas</p>
-        </div>
-      </div>
+      {componentFeed}
     </div>
   )
 }
