@@ -258,7 +258,13 @@
     height: 32px;
   }
 
-  .ioncolor{
+  .ioncolorpost{
     color: green;
+  }
+  .ioncolorlike{
+    color:red;
+  }
+  .ionwhite{
+    color: white;
   }
  
