@@ -7,10 +7,13 @@ export default function Feed(props) {
     const [isActiveFirstLike, setIsActiveFirstLike] = React.useState(false);
     const [isActiveSecondLike, setIsActiveSecondLike] = React.useState(false);
   
-    const [contadorfirstlike, setContadorFirstLike] = React.useState(101369);
-    const [contadorsecondlike, setContadorSecondLike] = React.useState(99169);
+    const number1 = 101369;
+    const number2 = 1504;
+
+    const [contadorfirstlike, setContadorFirstLike] = React.useState(number1);
+    const [contadorsecondlike, setContadorSecondLike] = React.useState(number2);
   
-    
+
   
     function handlefirstPost(){
       setIsActiveFirstPost(!isActiveFirstPost);
@@ -111,7 +114,7 @@ export default function Feed(props) {
           <div class="post-coments">
             <img class="profile post-coments-img"
               src={"respondeai.svg"} alt="respondeai"/>
-            <p>Curtido por respondeai e outras {contadorfirstlike} pessoas</p>
+            <p>Curtido por <span style={{fontWeight:'bold'}}>respondeai</span> e <span style={{fontWeight:'bold'}}>outras {contadorfirstlike.toLocaleString('pt-BR')} pessoas</span></p>
           </div>
         </div>
         <div class="post" >
@@ -143,8 +146,8 @@ export default function Feed(props) {
           </div>
           <div class="post-coments">
             <img class="profile post-coments-img"
-              src={"adorable_animals.svg"} alt="animals"/>
-            <p>Curtido por respondeai e outras {contadorsecondlike} pessoas</p>
+              src={"meowed.svg"} alt="animals"/>
+            <p>Curtido por <span style={{fontWeight: 'bold'}}>meowed</span> e <span style={{fontWeight: 'bold'}}>outras {contadorsecondlike.toLocaleString('pt-BR')} pessoas</span></p>
           </div>
         </div>
       </div>
