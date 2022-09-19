@@ -259,7 +259,8 @@
   }
 
   .ioncolorpost{
-    color: green;
+    color:black;
+    
   }
   .ioncolorlike{
     color:red;
@@ -267,4 +268,5 @@
   .ionwhite{
     color: white;
   }
+
  
