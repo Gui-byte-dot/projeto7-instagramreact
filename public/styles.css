@@ -160,6 +160,10 @@
     margin-left: 10px;
     font-weight: bold;
   }
+  .post{
+    border: 1px solid #DBDBDB;
+    margin-top: 24px;
+  }
   
   .post-media img {
     width: 100%;
@@ -185,17 +189,24 @@
     justify-content: space-around;
     align-items: center;
   }
+  .post-action div:nth-child(2){
+    margin-right: 17px;
+  }
   
   .post-coments-img {
     width: 20px;
     height: 20px;
+  }
+  .persona{
+    margin-left: 17px;
   }
   
   .sidebar {
     background-color: #ffffff;
     width: 321px;
     height: auto;
-    margin-top: 88px;
+    margin-top: 108px;
+    margin-left: 20px;
   }
   
   .sidebar-perfil {
@@ -203,6 +214,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-left: 22px;
+  }
+  .sidebar-conteudo{
+    margin-left: 29px;
   }
   
   .sidebar-perfil div {
@@ -225,6 +240,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 24px;
   }
   
   .paragrafo-1-sugestao {
@@ -235,16 +251,21 @@
   }
   
   .paragrafo-2-sugestao {
-    margin-right: 10px;
     width: 55px;
     font-size: 12px;
     color: #262626;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 0;
   }
-  
+ 
   .perfil-sugestao {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .perfil-sugestao div{
+    margin-left: 11px;
   }
   
   .perfil-sugestao-item {
