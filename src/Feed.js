@@ -40,46 +40,7 @@ export default function Feed(props) {
       }
     }
   
-    // let handlePost = (index) => {
-    //   if(isActivePost === index){
-    //     setIsActivePost(null)
-    //   } else {
-    //     setIsActivePost(index)
-  
-    //   }
-    // }
-    // let handleLike = (indice) => {
-    //   if(isActiveLike === indice){
-    //     setIsActiveLike(null);
-    //     setContadorPost(contadorpost - 1);
-  
-    //   } else {
-    //     setIsActiveLike(indice);
-    //     setContadorPost(contadorpost + 1);
-  
-    //   }
-    // }
-    
-    // const toggle = (index) => {
-    //   setIsActive((prev) => {
-    //     return prev === index ? null : index
-    //   });
-    // }
-    // className={isActive === index ? 'ioncolor' : ''} onClick={() => toggle(index)} >
-  
-    // function handleClick (){
-    //   isActive === '' ? setIsActive('ioncolor') : setIsActive('');
-    // }
-    // const handleClick = index => {
-    //   setIsActive(index); 
-    // };
-    // const handleClick = (i) => {
-    //   if (isActive.indexOf(i) === -1) {
-    //     setIsActive([...isActive, i]);
-    //   }
-    // };
-  
-  
+ 
   
     return (
   
